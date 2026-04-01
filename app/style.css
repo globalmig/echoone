@@ -230,7 +230,7 @@
         padding: 50px 30px;
     }
 
-    .home1>div>:nth-child(2)>section p.pc{
+    .home1>div>:nth-child(2)>section p.pc {
         margin-top: 5px;
         display: block !important;
     }

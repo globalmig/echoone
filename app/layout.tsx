@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "에코원",
     images: [
       {
-        url: "https://.../images/og_image.png",
+        url: "https://../images/og_image.png",
         width: 1200,
         height: 630,
         alt: "에코원",

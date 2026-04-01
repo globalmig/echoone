@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/products/lifestyle/쇼파형라온드림.png" alt="쇼파형 라온드림" width={1200} height={967} />
+            <Image src="/images/쇼파형라온드림_B.png" alt="쇼파형 라온드림" width={680} height={548} />
           </div>
 
         </div >
@@ -112,7 +112,7 @@ export default function Home() {
               <Link href="/product/heating">
                 <div>
                   <div>
-                    <Image src="/images/products/heating/라온블랙다이아.png" alt="" width={1000} height={526} />
+                    <Image src="/images/라온블랙다이아.png" alt="라온블랙다이아" width={479} height={251} />
                   </div>
                   <h4>라온블랙다이아</h4>
                 </div>
@@ -122,7 +122,7 @@ export default function Home() {
               <Link href="/product/lifestyle">
                 <div>
                   <div>
-                    <Image src="/images/products/lifestyle/쇼파형라온드림.png" alt="" width={1200} height={967} />
+                    <Image src="/images/쇼파형라온드림.png" alt="쇼파형라온드림" width={399} height={323} />
                   </div>
                   <h4>쇼파형 라온드림</h4>
                 </div>
@@ -132,7 +132,7 @@ export default function Home() {
               <Link href="/product/lifestyle">
                 <div>
                   <div>
-                    <Image src="/images/products/lifestyle/셀파워충전소.png" alt="" width={700} height={935} />
+                    <Image src="/images/셀파워충전소.png" alt="셀파워충전소" width={282} height={377} />
                   </div>
                   <h4>셀파워 충전소</h4>
                 </div>

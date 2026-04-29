@@ -1,36 +1,40 @@
-import SectionTitle from "@/components/common/SectionTitle";
 import MainSlide from "@/components/slide/MainSlide";
-import { MainTitle, SubTitle } from "@/components/style/style";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <main className="home-banner">
+      <main className="home-banner w-[full] block relative">
         <div>
           <div className="slider-wrapper">
             <MainSlide />
           </div>
-          <div>
+          <div className="w-[90%] absolute top-[50px] left-[5%]
+          pc:w-300 pc:top-[45%] pc:left-1/2 pc:-translate-x-1/2 pc:-translate-y-1/2">
             <div>
               <div>
-                <Image src="/images/하루의활기찬시작.png" alt="하루의 활기찬 시작" width={642} height={254} />
+                <Image
+                  className="w-55 h-auto md:w-80 pc:w-[540px]!"
+                  src="/images/하루의활기찬시작.png"
+                  alt="하루의 활기찬 시작"
+                  width={642}
+                  height={254} />
               </div>
-              <h2>단순한 활력을 넘어<br className="mo" />몸속 깊은 곳의 균형까지</h2>
-              <h3>우리들의 하루를 더 단단하고 건강하게 지켜줍니다.</h3>
+              <h2 className="font-['myeongjo-b'] text-red mt-5 mb-[15px] pc:mt-[50px] pc:mb-[15px] pc:text-[2rem]">단순한 활력을 넘어<br className="mo" />몸속 깊은 곳의 균형까지</h2>
+              <h3 className="font-['myeongjo-b'] pc:text-[1.5rem]">우리들의 하루를 더 단단하고 건강하게 지켜줍니다.</h3>
             </div>
           </div>
         </div>
       </main>
 
-      <article className="home1">
-        <div>
+      <article>
+        <div className="relative pc:flex pc:justify-between">
 
           <div>
             <div>
-              <SubTitle>자연이 준 최대의 선물!</SubTitle>
-              <MainTitle>귀를 기울이면 들려오는 자연의 속삭임<br />좋은 에너지는 건강이 됩니다.</MainTitle>
+              <p className="font-['myeongjo-ex'] text-red pc:text-[1.2rem]">자연이 준 최대의 선물!</p>
+              <h2 className="font-['myeongjo-ex'] mt-[15px] mx-0 mb-[25px] pc:mb-[50px] pc:text-[2rem]">귀를 기울이면 들려오는 자연의 속삭임<br />좋은 에너지는 건강이 됩니다.</h2>
             </div>
             <p>‘원적외선의 과학기술이 숙면 과학의 기술’ 입니다.<br className="pc" />
               칠보복합세라믹으로 가족의 건강을 되찾아드리겠습니다.<br className="pc" />
@@ -45,48 +49,61 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="display-flex-flow">
-            <div className="pc">
-            </div>
-            <section>
-              <Link href="/product/heating">
+          <div className="display-flex-flow my-[70px] mx-0 pc:m-0 pc:w-[520px] pc:justify-left pc-gap-5">
+            <div className="pc pc:w-[250px] pc:h-[250px]"></div>
+            <section
+              className="w-[48%] flex justify-center items-center py-[30px] px-[10px] duration-300 bg-red hover:bg-[#b90000]
+              md:py-[50px] md:px-[10px]
+              pc:py-[30px] pc:w-[250px] pc:h-[250px]">
+              <Link
+                className="text-center text-white"
+                href="/product/heating">
                 <div>
-                  <Image src="/icons/전신온열케어.png" alt="전신 온열 케어 제품 보기" width={100} height={100} />
+                  <Image
+                    className="w-10 h-auto mt-0 mx-auto mb-5 pc:w-[70px]"
+                    src="/icons/전신온열케어.png" alt="전신 온열 케어 제품 보기" width={100} height={100} />
                 </div>
-                <h3>전신 온열 케어</h3>
-                <p className="pc">전신을 따뜻하게 감싸고 파동 에너지를 전달하여 내일의 에너지를 충전합니다.</p>
+                <h3 className="pc:mb-[5px]">전신 온열 케어</h3>
+                <p className="hidden mt-[5px] md:block pc:block">전신을 따뜻하게 감싸고 파동 에너지를 전달하여 내일의 에너지를 충전합니다.</p>
               </Link>
             </section>
-            <div className="pc"></div>
-            <section>
-              <Link href="/product/intensive">
+            <div className="pc pc:w-[250px] pc:h-[250px] pc:bg-[#222] pc:my-5"></div>
+            <section
+              className="w-[48%] flex justify-center items-center py-[30px] px-[10px] duration-300 bg-[#555] hover:bg-[#222]
+            md:py-[50px] md:px-[10px]
+            pc:py-[30px] pc:w-[250px] pc:h-[250px] pc:my-5">
+              <Link
+                className="text-center text-white"
+                href="/product/intensive">
                 <div>
-                  <Image src="/icons/부분집중케어.png" alt="부분 집중 케어 제품 보기" width={100} height={100} />
+                  <Image
+                    className="w-10 h-auto mt-0 mx-auto mb-5 pc:w-[70px]"
+                    src="/icons/부분집중케어.png" alt="부분 집중 케어 제품 보기" width={100} height={100} />
                 </div>
-                <h3>부분 집중 케어</h3>
-                <p className="pc">신체 특정 부위의 체온을 올리고 통증 완화를 도와 따뜻한 휴식을 드립니다.</p>
+                <h3 className="pc:mb-[5px]">부분 집중 케어</h3>
+                <p className="hidden mt-[5px] md:block pc:block">신체 특정 부위의 체온을 올리고 통증 완화를 도와 따뜻한 휴식을 드립니다.</p>
               </Link>
             </section>
-            <div className="pc"></div>
-            <div className="pc"></div>
+            <div className="pc pc:w-[250px] pc:h-[250px]"></div>
+            <div className="pc pc:w-[250px] pc:h-[250px] pc:bg-[url('/images/box-bg.png')] pc:bg-cover pc:bg-center pc:bg-no-repeat"></div>
           </div>
 
-          <div>
-            <Image src="/images/쇼파형라온드림_B.png" alt="쇼파형 라온드림" width={680} height={548} />
+          <div className="-mt-[85px] pc:mt-0 pc:absolute pc:right-50 pc:-bottom-[30px]">
+            <Image className="w-full h-auto md:w-[80%] md:m-auto pc:w-[680px]!" src="/images/쇼파형라온드림_B.png" alt="쇼파형 라온드림" width={680} height={548} />
           </div>
 
         </div >
       </article >
 
-      <article className="home2">
-        <div>
+      <article>
+        <div className="pc:flex pc:justify-between">
 
-          <div>
+          <div className="pc:w-[580px] pc:order-2 pc:my-auto pc:mx-0">
             <div>
-              <SubTitle>에코원이 만들어낸 건강과학</SubTitle>
-              <MainTitle>어제보다 건강한 오늘,<br />칠보세라믹으로부터</MainTitle>
+              <p className="font-['myeongjo-ex'] text-red pc:text-[1.2rem]">에코원이 만들어낸 건강과학</p>
+              <h2 className="font-['myeongjo-ex'] mt-[15px] mx-0 mb-[25px] pc:mb-[50px] pc:text-[2rem]">어제보다 건강한 오늘,<br />칠보세라믹으로부터</h2>
             </div>
-            <p>칠보세라믹은 백두대간의 태백산 줄기에 위치한 일월산에서 1억 5천만년 전 형성된 퇴적암으로 열에너지파의 일종인 적외선 영역(0.76~1000um)에는 원적외선 파장대가 있어 모든 생물의 성장발육과 생명활동을 촉진시키는 신비의 빛 생육광선이 있습니다. <br /><br />열에너지의 효율이 가장 강력한 파장대(6~14um)의 원적외선 중 방출량이 가장 우수한 소재를 선별, 명물질을 블랜딩시켜, 원료정제, 혼합 등 철저한 성분관리를 하였으며, 또한 고온으로 소결하여 원적외선이 고방사되는 복사세라믹입니다.</p>
+            <p className="font-['nanum']">칠보세라믹은 백두대간의 태백산 줄기에 위치한 일월산에서 1억 5천만년 전 형성된 퇴적암으로 열에너지파의 일종인 적외선 영역(0.76~1000um)에는 원적외선 파장대가 있어 모든 생물의 성장발육과 생명활동을 촉진시키는 신비의 빛 생육광선이 있습니다. <br /><br />열에너지의 효율이 가장 강력한 파장대(6~14um)의 원적외선 중 방출량이 가장 우수한 소재를 선별, 명물질을 블랜딩시켜, 원료정제, 혼합 등 철저한 성분관리를 하였으며, 또한 고온으로 소결하여 원적외선이 고방사되는 복사세라믹입니다.</p>
             <div className="read-more">
               <Link href="/company" className="display-flex">
                 <p>READ MORE</p>
@@ -97,50 +114,74 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <Image src="/images/home_contents.png" alt="어제보다 건강한 오늘" width={1200} height={929} />
+          <div className="mt-[50px] pc:mt-0">
+            <Image className="pc:w-[550px]" src="/images/home_contents.png" alt="어제보다 건강한 오늘" width={1200} height={929} />
           </div>
 
         </div>
       </article>
 
-      <article className="home3">
+      <article className="bg-[#f5f5f5]">
         <div>
-          <SectionTitle main="칠보세라믹의 헬스테라피" sub="통증은 멀게, 건강은 가깝게" />
+          <div className="text-center">
+            <p className="font-['myeongjo-ex'] text-red pc:text-[1.2rem]">통증은 멀게, 건강은 가깝게</p>
+            <h2 className="font-['myeongjo-ex'] mt-[15px] mx-0 mb-[25px] pc:mb-[50px] pc:text-[2rem]">칠보세라믹의 헬스테라피</h2>
+          </div>
           <div className="display-flex-flow">
-            <section>
-              <Link href="/product/heating">
-                <div>
+            <section className="bg-white w-full h-80 my-[13px] mx-0 relative pc:w-[386px] pc:h-[350px] pc:m-0">
+              <Link
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pc:insert-0"
+                href="/product/heating">
+                <div className="flex justify-center items-center flex-col w-[220px] m-auto pc:w-[300px] pc:h-[180px]">
                   <div>
-                    <Image src="/images/라온블랙다이아.png" alt="라온블랙다이아" width={479} height={251} />
+                    <Image
+                      className="h-[180px] w-auto m-auto"
+                      src="/images/라온블랙다이아.png"
+                      alt="라온블랙다이아"
+                      width={479}
+                      height={251} />
                   </div>
-                  <h4>라온블랙다이아</h4>
+                  <h4 className="mt-[30px] text-center font-light">라온블랙다이아</h4>
                 </div>
               </Link>
             </section>
-            <section>
-              <Link href="/product/lifestyle">
-                <div>
+            <section className="bg-white w-full h-80 my-[13px] mx-0 relative pc:w-[386px] pc:h-[350px] pc:m-0">
+              <Link
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pc:insert-0"
+                href="/product/lifestyle">
+                <div className="flex justify-center items-center flex-col w-[220px] m-auto pc:h-[180px]">
                   <div>
-                    <Image src="/images/쇼파형라온드림.png" alt="쇼파형라온드림" width={399} height={323} />
+                    <Image
+                      className="h-[180px] w-auto m-auto"
+                      src="/images/쇼파형라온드림.png"
+                      alt="쇼파형라온드림"
+                      width={399}
+                      height={323} />
                   </div>
-                  <h4>쇼파형 라온드림</h4>
+                  <h4 className="mt-[30px] text-center font-light">쇼파형 라온드림</h4>
                 </div>
               </Link>
             </section>
-            <section>
-              <Link href="/product/lifestyle">
-                <div>
+            <section className="bg-white w-full h-80 my-[13px] mx-0 relative pc:w-[386px] pc:h-[350px] pc:m-0">
+              <Link
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pc:insert-0"
+                href="/product/lifestyle">
+                <div className="flex justify-center items-center flex-col w-[220px] m-auto pc:w-[350px] pc:h-[180px]">
                   <div>
-                    <Image src="/images/셀파워충전소.png" alt="셀파워충전소" width={282} height={377} />
+                    <Image
+                      className="h-[180px] w-auto m-auto"
+                      src="/images/셀파워충전소.png"
+                      alt="셀파워충전소"
+                      width={282}
+                      height={377} />
                   </div>
-                  <h4>셀파워 충전소</h4>
+                  <h4 className="mt-[30px] text-center font-light">셀파워 충전소</h4>
                 </div>
               </Link>
             </section>
           </div>
           <div className="read-more">
-            <Link href="/product/heating" className="display-flex">
+            <Link href="/product/heating" className="flex justify-center">
               <p>READ MORE</p>
               <div>
                 <Image src="/icons/arrow_red.png" alt="자세히 보기 아이콘" width={15} height={29} />

@@ -17,14 +17,13 @@ interface ProductListProps {
 export default function ProductList({ category }: ProductListProps) {
 
     const [products, setProducts] = useState<Product[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
                 const response = await fetch("/api/product");
                 const data = await response.json();
-
-                // 전체 데이터 중 해당 카테고리 제품만 필터링
                 const filtered = data.filter((p: Product) => p.category === category);
                 setProducts(filtered);
             } catch (error) {
@@ -33,22 +32,30 @@ export default function ProductList({ category }: ProductListProps) {
         };
 
         fetchProducts();
+        setLoading(false);
     }, [category]);
 
-    if (!products) return <div className="loading">정보를 불러오는 중입니다.</div>
-    if (products.length === 0) return <div className="loading">해당 카테고리의 제품이 존재하지 않습니다.</div>
+    if (loading) return <div className="loading">정보를 불러오는 중입니다.</div>
+    if (!products) return <div className="loading">해당 카테고리의 제품이 존재하지 않습니다.</div>
 
     return (
-        <div className="display-flex-flow">
+        <div className="display-flex-flow pc:justify-start pc:gap-[37px]">
             {products.map((p) =>
-                <section key={p.id}>
-                    <div>
-                        <div>
-                            <Image src={p.img} alt={p.name} width={600} height={387} />
+                <section key={p.id}
+                    className="border border-[#ccc] w-full h-80 my-3 mx-0
+                pc:w-[375px] pc:h-[375px]">
+                    <div className="text-center relative w-full h-80">
+                        <div className="absolute w-full left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2">
+                            <Image
+                                className="w-60 h-auto m-auto md:w-80 pc:w-auto pc:h-[180px]"
+                                src={p.img}
+                                alt={p.name}
+                                width={600}
+                                height={387} />
                         </div>
-                        <div>
-                            <h4>{p.name}</h4>
-                            {p.spec && <p>{p.spec}</p>}
+                        <div className="absolute w-full left-1/2 bottom-[25px] -translate-x-1/2 pc:-bottom-[10px]">
+                            <h4 className="pc:text-[1.2rem]">{p.name}</h4>
+                            {p.spec && <p className="pc:mt-[5px]">{p.spec}</p>}
                         </div>
                     </div>
                 </section>

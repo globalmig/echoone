@@ -43,3 +43,5 @@ next-env.d.ts
 # Agent 관련 설정 파일 제외
 AGENTS.md
 CLAUDE.md
+.agent/
+.claude/

@@ -22,18 +22,66 @@ export default function MainSlide() {
     };
 
     return (
-        <Slider ref={sliderRef} {...settings} className="main-slider">
-            <div className="main-slider-item">
-                <Image className="pc" src="/images/banner1.png" alt="에코원 칠보세라믹 배너" width={2560} height={700} priority quality={100} />
-                <Image className="mo" src="/images/banner_mo1.png" alt="에코원 칠보세라믹 배너" width={960} height={1500} priority quality={100} />
+        <Slider ref={sliderRef} {...settings} className="block">
+            <div>
+                <Image
+                    className="hidden! pc:block! w-full h-[700px] object-cover"
+                    src="/images/banner1.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={2560}
+                    height={700}
+                    priority
+                    loading="eager"
+                    quality={100} />
+                <Image
+                    className="block pc:hidden! w-full h-[600px] md:h-[500px] object-cover"
+                    src="/images/banner_mo1.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={960}
+                    height={1500}
+                    priority
+                    loading="eager"
+                    quality={100} />
             </div>
-            <div className="main-slider-item">
-                <Image className="pc" src="/images/banner2.png" alt="에코원 칠보세라믹 배너" width={2560} height={700} priority quality={100} />
-                <Image className="mo" src="/images/banner_mo2.png" alt="에코원 칠보세라믹 배너" width={960} height={1500} priority quality={100} />
+            <div>
+                <Image
+                    className="hidden! pc:block! w-full h-[700px] object-cover"
+                    src="/images/banner2.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={2560}
+                    height={700}
+                    priority
+                    loading="eager"
+                    quality={100} />
+                <Image
+                    className="block pc:hidden! w-full h-[600px] md:h-[500px] object-cover"
+                    src="/images/banner_mo2.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={960}
+                    height={1500}
+                    priority
+                    loading="eager"
+                    quality={100} />
             </div>
-            <div className="main-slider-item">
-                <Image className="pc" src="/images/banner3.png" alt="에코원 칠보세라믹 배너" width={2560} height={700} priority quality={100} />
-                <Image className="mo" src="/images/banner_mo3.png" alt="에코원 칠보세라믹 배너" width={960} height={1500} priority quality={100} />
+            <div>
+                <Image
+                    className="hidden! pc:block! w-full h-[700px] object-cover"
+                    src="/images/banner3.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={2560}
+                    height={700}
+                    priority
+                    loading="eager"
+                    quality={100} />
+                <Image
+                    className="block pc:hidden! w-full h-[600px] md:h-[500px] object-cover"
+                    src="/images/banner_mo3.png"
+                    alt="에코원 칠보세라믹 배너"
+                    width={960}
+                    height={1500}
+                    priority
+                    loading="eager"
+                    quality={100} />
             </div>
         </Slider>
     )

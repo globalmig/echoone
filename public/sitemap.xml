@@ -4,8 +4,38 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
 <url>
-    <loc>https://?</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://www.com</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>1.0</priority>
+</url>
+<url>
+    <loc>https://www.com/company</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>1.0</priority>
+</url>
+<url>
+    <loc>https://www.com/product/heating</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.9</priority>
+</url>
+<url>
+    <loc>https://www.com/product/intensive</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.com/product/lifestyle</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.com/product/health</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.com/product/controller</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
 </url>
 </urlset>

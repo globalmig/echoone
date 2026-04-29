@@ -1,7 +1,6 @@
 "use client"
 import ProductList from "@/components/board/ProductList";
 import CategoryBanner from "@/components/common/CategoryBanner";
-import { TitleWrapper } from "@/components/style/style";
 import { useParams } from "next/navigation";
 
 const productPageTitle = [
@@ -42,11 +41,11 @@ export default function ProductPage() {
         <>
             <CategoryBanner />
             <article className="product">
-                <div>
-                    <TitleWrapper>
-                        <p>{productTitle?.content}</p>
-                        <h2>{productTitle?.name}</h2>
-                    </TitleWrapper>
+                <div className="pt-[130px]">
+                    <div className="text-center mb-[50px]">
+                        <p className="text-red pc:text-[1.2rem]">{productTitle?.content}</p>
+                        <h2 className="mt-[5px] pc:text-[2rem]">{productTitle?.name}</h2>
+                    </div>
                     <ProductList category={category} />
                 </div>
             </article>

@@ -17,22 +17,24 @@ interface ProductListProps {
 export default function ProductList({ category }: ProductListProps) {
 
     const [products, setProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
+        setLoading(true);
         const fetchProducts = async () => {
             try {
                 const response = await fetch("/api/product");
                 const data = await response.json();
                 const filtered = data.filter((p: Product) => p.category === category);
                 setProducts(filtered);
+                setLoading(false);
             } catch (error) {
                 console.error("데이터 로딩 실패:", error);
             }
         };
 
         fetchProducts();
-        setLoading(false);
+
     }, [category]);
 
     if (loading) return <div className="loading">정보를 불러오는 중입니다.</div>

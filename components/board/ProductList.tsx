@@ -36,7 +36,7 @@ export default function ProductList({ category }: ProductListProps) {
     }, [category]);
 
     if (loading) return <div className="loading">정보를 불러오는 중입니다.</div>
-    if (!products) return <div className="loading">해당 카테고리의 제품이 존재하지 않습니다.</div>
+    if (products.length === 0) return <div className="loading">해당 카테고리의 제품이 존재하지 않습니다.</div>
 
     return (
         <div className="display-flex-flow pc:justify-start pc:gap-[37px]">

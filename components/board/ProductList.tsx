@@ -39,7 +39,7 @@ export default function ProductList({ category }: ProductListProps) {
     }, [category]);
 
     // if (loading) return <div className="loading">정보를 불러오는 중입니다.</div>
-    if (!loading) {
+    if (loading) {
         return (
             <div className="display-flex-flow pc:justify-start pc:gap-9.25">
                 {Array.from({ length: products.length }).map((_, index) => (

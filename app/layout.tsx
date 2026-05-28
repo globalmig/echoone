@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "에코원 | 칠보세라믹",
     description: "단순한 활력을 넘어 몸속 깊은 곳의 균형까지",
-    url: "https://...",
+    url: "https://www.echoone.co.kr",
     siteName: "에코원",
     images: [
       {
-        url: "https://../images/og_image.png",
+        url: "https://www.echoone.co.kr/images/og_image.png",
         width: 1200,
         height: 630,
         alt: "에코원",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   verification: {
-    other: {
-      "naver-site-verification": "",
+    other: { 
+      "naver-site-verification": "", //3a17332ea1896a52b33e1e507622a86310ec67d8
     }
   },
   robots: { index: true, follow: true },

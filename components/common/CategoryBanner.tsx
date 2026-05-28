@@ -15,7 +15,7 @@ export default function CategoryBanner() {
             <div>
                 <div>
                     <Image
-                        className="mo w-full h-[350px] object-cover"
+                        className="mo w-full h-87.5 object-cover"
                         src={category.banner.mo}
                         alt={category.title}
                         width={960}

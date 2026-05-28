@@ -89,7 +89,7 @@
 
   article>div {
     @apply pt-25 pb-20 max-w-300 my-0 mx-auto;
-    @apply pc:py-[150px] pc:px-0;
+    @apply pc:py-37.5 pc:px-0;
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -126,7 +126,7 @@
   }
 
   .read-more {
-    @apply mt-[50px];
+    @apply mt-12.5;
   }
 
   .read-more a {

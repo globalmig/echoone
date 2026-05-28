@@ -14,12 +14,12 @@ export default function TabMenu() {
     const menu = categoryName.categories;
 
     return (
-        <ul className="display-flex-flow justify-left absolute left-0 -bottom-[60px] w-full
-                        pc:left-1/2 pc:-bottom-[30px] pc:-translate-x-1/2 pc:w-300 pc:my-0 pc:mx-auto">
+        <ul className="display-flex-flow justify-left absolute left-0 -bottom-15 w-full
+                        pc:left-1/2 pc:-bottom-7.5 pc:-translate-x-1/2 pc:w-300 pc:my-0 pc:mx-auto">
             {menu?.map((m, index) =>
                 <li
                     key={index}
-                    className={`w-1/2 p-[15px] text-center hover:bg-black
+                    className={`w-1/2 p-3.75 text-center hover:bg-black
                         pc:w-[20%] pc:p-5
                     ${m.url === category ? "bg-black" : "bg-[#353535]"}`}>
                     <Link className="font-bold text-white pc:text-[1.2rem]"

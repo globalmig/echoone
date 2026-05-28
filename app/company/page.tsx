@@ -16,7 +16,7 @@ export default function CompanyPage() {
                         <div>
                             <div>
                                 <Image
-                                    className="w-[80%] mt-10 mx-0 mb-[30px] pc:w-105 pc:mt-0"
+                                    className="w-[80%] mt-10 mx-0 mb-7.5 pc:w-105 pc:mt-0"
                                     src="/images/하루의활기찬시작.png"
                                     alt="하루의 활기찬 시작"
                                     width={642}
@@ -24,7 +24,7 @@ export default function CompanyPage() {
                             </div>
                             <div>
                                 <h2 className="font-['myeongjo-ex'] text-red font-[1.6rem] pc:font-[2rem]">단순한 활력을 넘어<br /> 몸속 깊은 곳의 균형까지</h2>
-                                <h3 className="font-['myeongjo-ex'] font-[1.2rem] my-5 mx-0 mb-[50px]pc:font-[1.5rem] pc:mt-[30px]">우리들의 하루를 더 단단하고<br /> 건강하게 지켜줍니다.</h3>
+                                <h3 className="font-['myeongjo-ex'] font-[1.2rem] my-5 mx-0 mb-12.5 pc:font-[1.5rem] pc:mt-7.5">우리들의 하루를 더 단단하고<br /> 건강하게 지켜줍니다.</h3>
                             </div>
                             <div>
                                 <p className="my-5 mx-0">

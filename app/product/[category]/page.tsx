@@ -41,10 +41,10 @@ export default function ProductPage() {
         <>
             <CategoryBanner />
             <article className="product">
-                <div className="pt-[130px]">
-                    <div className="text-center mb-[50px]">
+                <div className="pt-32.5">
+                    <div className="text-center mb-12.5">
                         <p className="text-red pc:text-[1.2rem]">{productTitle?.content}</p>
-                        <h2 className="mt-[5px] pc:text-[2rem]">{productTitle?.name}</h2>
+                        <h2 className="mt-1.25 pc:text-[2rem]">{productTitle?.name}</h2>
                     </div>
                     <ProductList category={category} />
                 </div>
